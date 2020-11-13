@@ -1,39 +1,43 @@
 #include <iostream>
 using namespace std;
+
+void func(); //global func();
+
+
 class X
 {
 public:
-	void display();
-	void set(int);
+	void foo(int);
+	void func();
 private:
 	int a;
 };
 
 
-void X::set(int val)
+void X::foo(int a)
 {
-	cout << "X::set() called" << endl;
-	cout << "this = " << this << endl;
-	a = val;
+	cout << a << endl; //this a is parameter a
+	{
+		int a = 30;
+		cout << a << endl; //  this a is a that s defined inside the block
+	}
+	func(); // this call is member function func().
 }
 
-void X::display()
+void X::func()
 {
-	cout << "X::display() called!" << endl;
-	cout << "this= " << this << endl;
-	cout << "a = " << a << endl;
+	cout << "X class's func member functio" << endl;
+}
+
+void func()
+{
+	cout << "Global func function" << endl;
 }
 
 int main()
 {
 	X myx;
-	cout << "&myx = " << &myx << endl;
-	myx.set(10);
-	myx.display();
-
-	X* ptr = &myx;
-
-	ptr->display();
+	myx.foo(10);
 
 	return 0;
 }
