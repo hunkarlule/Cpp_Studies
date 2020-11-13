@@ -14,19 +14,22 @@ private:
 };
 
 
-void X::foo(int a)
+void X::foo(int x)
 {
-	cout << a << endl; //this a is parameter a
+	a = x; //this a is parameter a
 	{
 		int a = 30;
 		cout << a << endl; //  this a is a that s defined inside the block
 	}
+
+	cout << a << endl;  //this a is parameter a
+
 	func(); // this call is member function func().
 }
 
 void X::func()
 {
-	cout << "X class's func member functio" << endl;
+	cout << "X class's func member function" << endl;
 }
 
 void func()
