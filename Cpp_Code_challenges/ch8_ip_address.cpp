@@ -10,6 +10,45 @@
 #include <vector>
 #include <string>
 
+/// <summary>
+///  receives a string and returns true if the string is a decial number, false otherwise.
+/// 
+/// </summary>
+/// <param name="str"> the string to analyze </param>
+/// <returns>bool: true for decimal numbers, false otherwise.</returns>
+bool isNumber(const std::string& str) {
+    if (str.empty()) {
+        return false;
+    }
+
+    if (str.find_first_not_of("[0123456789]") == std::string::npos) {
+        return true;
+    }
+
+    return false;
+}
+
+/// <summary>
+/// receives a string with tokens seperated by dots(.) and return a vector that contains the tokens.
+/// </summary>
+/// <param name="str">the string to analyze</param>
+/// <returns> std::vector<std::string>: a vector of string that contains the tokens. </returns>
+std::vector<std::string>  getIPTokens(const std::string &str) {
+    size_t i = 0;
+    int dotCharIndex = -1;
+
+    std::vector<std::string> tokens;
+
+    do {
+        dotCharIndex = str.find('.', dotCharIndex + 1);
+        tokens.push_back(str.substr(i, dotCharIndex - i));
+        i = dotCharIndex + 1;
+    } while (dotCharIndex != std::string::npos);
+
+    return tokens;
+}
+
+
 // is_valid_ip()
 // Summary: This function validates an IP address.
 // Arguments:
@@ -18,16 +57,25 @@
 bool is_valid_ip(std::string ip){
 
     // Write your code here
-    char sepeartor = '.';
-    std::string subStr ="";
-    for (std::string::const_iterator it = ip.begin(); it != ip.end(); it++) {
-        if (*it == sepeartor) {
-            if (!subStr.empty()) {
-                std::isdigit(subStr)
+    std::vector<std::string> ipTokens = getIPTokens(ip);
+
+    if (ipTokens.size() != 4) {
+        return false;
+    }
+
+    for (std::string token : ipTokens) {
+        if (isNumber(token)) {
+            int tokenAsInt = std::stoi(token);
+            if (tokenAsInt < 0 || tokenAsInt > 255) {
+                return 0;
             }
         }
+        else {
+            return false;
+        }
     }
-    return false;
+
+    return true;
 }
 
 // Main function

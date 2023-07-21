@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch8_ip_address.cpp">
+    <ClCompile Include="ch9_fix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
