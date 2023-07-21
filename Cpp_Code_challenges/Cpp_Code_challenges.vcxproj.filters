@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch9_fix.cpp">
+    <ClCompile Include="ch10_tictactoe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
