@@ -143,8 +143,8 @@ int main(){
             }
         }
     }
-    */
-    // Write your code here
+   */ 
+
 
     if(age < 43830)
         std::cout << "You are " << age << " days old.";

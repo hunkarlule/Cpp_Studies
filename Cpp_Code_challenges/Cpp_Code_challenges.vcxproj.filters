@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch12_age_in_days.cpp">
+    <ClCompile Include="ch13_life.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
