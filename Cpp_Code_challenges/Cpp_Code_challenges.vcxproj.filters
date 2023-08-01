@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ch14_reflex.cpp">
+    <ClCompile Include="ch16_birthday.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
