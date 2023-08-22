@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="variant - Copy.cpp">
+    <ClCompile Include="producer-consumer - Copy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
