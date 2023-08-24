@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="filesystem - Copy.cpp" />
-    <ClCompile Include="filesystem.cpp" />
+    <ClCompile Include="span - Copy.cpp" />
+    <ClCompile Include="span.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
