@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pointers.cpp">
+    <ClCompile Include="switch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
