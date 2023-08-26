@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="switch.cpp">
+    <ClCompile Include="04-solution.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
